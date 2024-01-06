@@ -5,8 +5,7 @@
 
 The business problem outlined in the context of the dataset is related to public health efforts in the context of the COVID-19 pandemic. Specifically, the challenge is to predict whether individuals received the H1N1 flu vaccine or the seasonal flu vaccine based on data collected in the National 2009 H1N1 Flu Survey. According to the survey, there was a lower rate of H1N1 vaccination when compared to the seasonal vaccine: 5,674 participants received the H1N1 vaccine while 12,435 received the seasonal flue vaccine.
 
-![image of vaccination rates for H1N1 vaccine on the left compared to seasonal flu vaccine on the right](/images
-/H1N1_Seas_Rates.png)
+![image of vaccination rates for H1N1 vaccine on the left compared to seasonal flu vaccine on the right](/images/H1N1_Seas_Rates.png)
 
 The importance of this prediction task lies in understanding the factors and patterns associated with individuals' vaccination decisions. By identifying the demographic, opinion, and health behavior variables that correlate with vaccine uptake, public health authorities can gain insights that may inform future vaccination campaigns. This information can help guide strategies to improve vaccination rates, tailor communication efforts, and address specific concerns or barriers that certain groups may have regarding flu vaccination.
 

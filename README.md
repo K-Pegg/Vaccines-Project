@@ -1,7 +1,5 @@
-# Vaccines-Project
-Predict H1N1 and Seasonal Flu Vaccines
-
-# ** Prediction who are more likely ** - * xxx *
+![picture of capped vaccine](https://s.w-x.co/util/image/w/GettyImages-1280274196.jpg?crop=16:9&width=980&format=pjpg&auto=webp&quality=60)
+# H1N1 Vaccine Predictive Modeling
 
 ## Business Understanding
 
@@ -14,13 +12,16 @@ The importance of this prediction task lies in understanding the factors and pat
 This insight can be valuable for public health officials and policymakers in developing targeted and effective strategies to increase vaccination coverage and mitigate the impact of flu outbreaks.
 
 
-## Data Understanding
+## Data
 
-The data we used was acquired from The National Institute of Health (NIH). There were 26,707 survey participants in the raw data.
+The data we used was acquired from The National Institute of Health (NIH), found [here](Data from https://www.drivendata.org/competitions/66/flu-shot-learning/). There were 26,707 survey participants in the raw data.
 
 
-## Data Preparation
+### Preparation
 
+In this stage, we initiated a feature selection procedure by randomly selecting features for incorporation into our predictive model. For efficient handling of categorical variables, we employed the OneHotEncoder, a methodology proficient in converting categorical data into a format conducive to analysis. Furthermore, we executed data scaling, centering it around the mean to guarantee uniformity. Addressing imbalances within our dataset, we deployed the Synthetic Minority Over-sampling Technique (SMOTE) to resample the data, augmenting the representation of minority classes and fortifying the model's robustness. Additionally, in an effort to manage missing values, we adopted a strategy of dropping columns with null values. After cleaning the data, there were 13,506 subjects that remained. GridSearchCV was used to adjust parameters
+
+## Modeling & Evaluation
 A decision tree was used as our primary model, which stems from its capacity for binary classification. Decision trees can also deal with relationships that have a less linear relationship, which is what we typically see with survey data. Survey data is also typically highly dimensional related to a binary concept, which also led us to use a decision tree.
 
 
@@ -38,36 +39,23 @@ This graph shows the performance for our models after tuning, similar to how you
 Our model performed with 83% accuracy & 88% precision on the training data, while it was 80% accurate with 70% precision on the testing data.
 
 
-## Analysis & Recommendations 
+## Recommendations 
 
 ### Recommendation 1
-
-We recommend reducing features & adjusting parameters to further improve model performance.
-Feature selection tool could be used to choose features from the dataset
-GridSearchCV was used to adjust parameters
+We recommend reducing features & adjusting parameters to further improve model performance. A feature selection tool could be used to choose features from the dataset
 
 
 ### Recommendation 2
-
-Recommendation 2
-We can dive more into the data & so forthcoming vaccine campaigns can be strategically tailored to resonate with demographics that exhibit a lower inclination towards vaccination.
-Initial exploration of the data showed lower vaccination rates in Hispanic & Black populations
-Healthcare workers typically had a higher vaccination rate
+We can dive more into the data & so forthcoming vaccine campaigns can be strategically tailored to resonate with demographics that exhibit a lower inclination towards vaccination. Initial exploration of the data showed lower vaccination rates in Hispanic & Black populations. Healthcare workers typically had a higher vaccination rate
 
 
 
 ### Recommendation 3
-
-We would recommend investing in community engagement and education programs regarding vaccination to address specific concerns or barriers to vaccination within different vaccination groups
-Research more into concerns/barriers to vaccinations
-Skepticism in medical care
-
-Creating strategic partnerships with healthcare providers & organizations would be another step in the right direction. Collaborating with healthcare providers, community organizations, & other stakeholders can help optimize vaccine distribution.
+We would recommend investing in community engagement and education programs regarding vaccination to address specific concerns or barriers to vaccination within different vaccination groups. More research into concerns/barriers to vaccinations could also be useful in this instance. Creating strategic partnerships with healthcare providers & organizations may be a way to help optimize vaccine distribution.
 
 
 ### Conclusion
-
-In conclusion, our analysis of the National 2009 H1N1 Flu Survey data provided valuable insights into predicting individuals' decisions on receiving the H1N1. The decision tree model, especially after tuning, demonstrated strong performance with 83% accuracy and 88% precision on the training data and 80% accuracy with 70% precision on the testing data. We recommend further model refinement through feature reduction and parameter adjustments for improved performance. Additionally, exploring demographic patterns revealed lower vaccination rates in Hispanic and Black populations, suggesting targeted campaigns and community engagement programs. Addressing concerns and barriers, particularly skepticism in medical care, and fostering strategic partnerships with healthcare providers are essential steps in optimizing future vaccine distribution efforts.
+In conclusion, our analysis of the National 2009 H1N1 Flu Survey data provided valuable insights into predicting individuals' decisions on receiving the H1N1 vaccine. The decision tree model, especially after tuning, demonstrated strong performance with 83% accuracy and 88% precision on the training data and 80% accuracy with 70% precision on the testing data. We recommend further model refinement through feature reduction and parameter adjustments for improved performance. Additionally, exploring demographic patterns revealed lower vaccination rates in Hispanic and Black populations, suggesting targeted campaigns and community engagement programs. Addressing concerns and barriers, particularly skepticism in medical care, and fostering strategic partnerships with healthcare providers are essential steps in optimizing future vaccine distribution efforts.
 
 
 
@@ -77,7 +65,7 @@ In conclusion, our analysis of the National 2009 H1N1 Flu Survey data provided v
 
 2. Conduct a nuanced examination of demographic patterns, utilizing covert analytical methodologies.
 
-3. Initiate covert community engagement initiatives designed to address specific barriers without drawing undue attention.
+3. Initiate community engagement initiatives designed to address specific barriers without drawing undue attention.
 
 
 ## Repo Structure 
@@ -85,8 +73,6 @@ In conclusion, our analysis of the National 2009 H1N1 Flu Survey data provided v
 ├── Data
 ├── Images
 ├── Notebooks
-│   ├── 
-│   ├── 
 ├── .gitignore
 ├── Final.ipynb
 ├── LICENSE
